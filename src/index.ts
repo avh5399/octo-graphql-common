@@ -1,0 +1,1 @@
+export {GihubAPI} from './client';

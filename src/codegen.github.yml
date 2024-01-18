@@ -1,0 +1,16 @@
+schema:
+    - https://api.github.com/graphql:
+        headers:
+            user-agent: 'node.js'
+            Authorization: "Bearer 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"
+
+documents:
+    - './src/schema.ts'
+
+generates:
+    ./src/types/__generated__/:
+        preset: client
+        presetConfig:
+            gqlTagName: 'gql'
+
+ignoreNoDocuments: true

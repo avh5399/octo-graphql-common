@@ -1,0 +1,46 @@
+{
+  "name": "octo-graphql-common",
+  "version": "1.0.0",
+  "description": "A common library for the Github GraphQL API",
+  "main": "dist/index.js",
+  "engines": {
+    "node": "^18 || ^20"
+  },
+  "scripts": {
+    "build": "run-s clean build:tsc",
+    "build:tsc": "tsc --build",
+    "clean": "rimraf dist",
+    "start": "node ./dist/src/index.js",
+    "build:gql:github": "npx graphql-codegen --config src/codegen.github.yml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [],
+  "author": "Ameya Hampihallikar",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/datasource-rest": "^6.2.2",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "custom-env": "^2.0.2",
+    "dotenv": "^16.3.1",
+    "envalid": "^8.0.0",
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
